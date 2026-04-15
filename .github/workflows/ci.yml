@@ -25,7 +25,6 @@ jobs:
           black --check --line-length=80 --target-version=py33 .
           flake8 .
           mypy .
-          # mypy --exclude ^build/ .
           pylint --py-version=3.3 *.py
           pylint --disable=R0904,C0114,C0115,C0116 --py-version=3.3 tests/*.py
 
