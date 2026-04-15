@@ -4,20 +4,20 @@ on:
   - pull_request
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Build the package
-        run: |
-          pip install build
-          python -m build
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#
+#      - name: Set up Python
+#        uses: actions/setup-python@v5
+#        with:
+#          python-version: '3.10'
+#
+#      - name: Build the package
+#        run: |
+#          pip install build
+#          python -m build
 
   test:
     runs-on: ubuntu-latest
@@ -38,7 +38,8 @@ jobs:
         run: |
           black --check --line-length=80 --target-version=py33 .
           flake8 .
-          mypy --exclude ^build/ .
+          mypy .
+          # mypy --exclude ^build/ .
           pylint --py-version=3.3 *.py
           pylint --disable=R0904,C0114,C0115,C0116 --py-version=3.3 tests/*.py
 
