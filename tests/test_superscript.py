@@ -1,6 +1,6 @@
 import unittest
 
-from myscript import goodbye, hello
+from superscript import goodbye, hello
 
 
 class TestMyScript(unittest.TestCase):

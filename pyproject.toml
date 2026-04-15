@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "myscript"
+name = "superscript"
 version = "1.0.0"
 description = "Study Script."
 readme = "README.md"
@@ -14,4 +14,4 @@ license = {file = "LICENSE"}
 dev = ["black", "flake8", "mypy", "pylint", "coverage"]
 
 [tool.setuptools]
-py-modules = ["myscript"]
+py-modules = ["superscript"]
