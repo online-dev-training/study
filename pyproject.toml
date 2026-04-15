@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myscript"
+version = "1.0.0"
+description = "Study Script."
+readme = "README.md"
+requires-python = ">=3.3"
+license = {file = "LICENSE"}
+
+[project.optional-dependencies]
+dev = ["black", "flake8", "mypy", "pylint", "coverage"]
+
+[tool.setuptools]
+py-modules = ["myscript"]
